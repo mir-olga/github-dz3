@@ -34,7 +34,7 @@ img {
 .header {
     padding-top: 24px;
     padding-bottom: 25px;
-
+    border-bottom: 1px double #ECECEC;
 }
 .container{
     width: 1170px;
@@ -48,9 +48,7 @@ img {
 }
 .header-container {
     display: flex;
-    align-items: center;
-
-    
+    align-items: center; 
 }
 .header-navigation{
     display: flex;
@@ -58,6 +56,7 @@ img {
 }
 .header-list {
     display: flex;
+    margin-left: 93px;
 }
 .header-item:not(:last-child) {
     margin-right: 50px;
@@ -68,21 +67,17 @@ img {
     margin-left:auto;
 }
 .logo {
-    margin-right: 93px;
-   
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
-    line-height: calc (31/ 26);
+    line-height: calc(31/26);
     letter-spacing: 0.03em;
     color:var(--accent-color);
 }
-
 .logo-head {
     color: #000;
 }
-
 .header-link {
     display: block;
     
@@ -94,11 +89,9 @@ img {
 }
 .header-link:active,
 .header-link:hover, 
-.header-link:focus
-{
+.header-link:focus {
     color: var(--accent-color);
 }
-
 .header-tel-link {
     display: block;
 
@@ -109,8 +102,7 @@ img {
     color:var(--secondary-title-color);
 }
 .header-tel-link:hover, 
-.header-tel-link:focus
-{
+.header-tel-link:focus {
     color: var(--accent-color);
 }
 .current {
@@ -118,17 +110,15 @@ img {
 }
 /*Секция Герой*/
 .hero {
+    padding:200px 0;
     background-color: #2F303A;
 }
 .hero-container{
-    padding-bottom: 200px;
+    /*padding-bottom: 200px;*/
 }
 .hero-title {
-    display: inline-block;
     width: 696px;
-    margin-top: 200px;
-    margin-bottom: 30px;
-    padding: 0px 252px;
+    margin:0 auto 30px;
 
     font-weight: 900;
     font-size: 44px;
@@ -148,6 +138,7 @@ img {
 
     background-color:#2196F3;
     border:transparent;
+    border-radius: 5px;
     font-family: inherit;
     font-weight: bold;
     font-size: 16px;
@@ -163,11 +154,10 @@ img {
 
 .benefits-list {
     display: flex;
+    margin-right: -30px;
 }
 .benefits-item {
     flex-basis: calc(100% / 4 - 30px);
-}
-.benefits-item:not(:last-child) {
     margin-right: 30px;
 }
 .benefits-title {
@@ -183,7 +173,7 @@ img {
 .benefits-text {
     font-weight: normal;
     font-size: 14px;
-    line-height: 1.857;
+    line-height: calc(24/14);
     letter-spacing: 0.03em;
 }
 /*!-- Чем мы занимаемся --*/
@@ -205,7 +195,7 @@ img {
     flex-wrap: wrap;
 }
 .about-item {
-    flex-basis: calc(100% / 3 - 30px);
+    flex-basis: calc((100% - (30px*2)) / 3);
 }
 .about-item:not(:last-child) {
     margin-right: 30px;
@@ -221,6 +211,7 @@ img {
 .team-item {
     background-color: #FFFFFF;
     padding-bottom: 30px;
+    border-radius: 0 0 10px 10px;
 }
 .team-item:not(:last-child) {
     margin-right: 30px;
@@ -248,9 +239,6 @@ img {
 }
 
 /*Portfolio.html*/
-.portfolio-section {
-    border-top: 1px double #ECECEC;
-}
 .portfolio-list-button {
     display: flex;
     justify-content:center;
@@ -261,6 +249,7 @@ img {
     justify-content:center;
     padding: 6px 22px;
     border: transparent;
+    border-radius: 5px;
 
     font-family: inherit;
     color: var(--primary-title-color);
@@ -271,7 +260,8 @@ img {
     letter-spacing: 0.03em;
 }
 .portfolio-button:hover,
-.portfolio-button:focus {
+.portfolio-button:focus,
+.button-current {
     color: #FFFFFF;
     background: #2196F3;
     cursor: pointer;
@@ -280,6 +270,8 @@ img {
     margin-right: 8px;
 }
 .portfolio-title {
+    margin-bottom: 4px;
+    
     font-weight: bold;
     font-size: 18px;
     line-height: calc(36/18);
@@ -295,24 +287,32 @@ img {
 .portfolio-list-flex {
     display: flex;
     flex-wrap: wrap;
+    margin: -13px;
 }
-    /*footer*/
+.portfolio-item {
+    margin: 13px;
+    flex-basis: calc(100% / 3 - 30px);
+    border: 1px solid #EEEEEE;
+}
+.portfolio-card {
+    margin:20px 24px;
+}
+/*----Footer----*/
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
     background: #2F303A;
 }
 .footer-logo-link {
-    display: inline-block;
+    display: block;
     margin-bottom: 20px;
 }
 .logo-footer {
 
     color:#ffffff;
 }
-.footer-list {
-    padding-top: 2px;
-    padding-bottom: 2px;
+.footer-list:not(:last-child) {
+    margin-bottom: 5px; 
 }
 .footer-link {
     font-weight: normal;
@@ -321,8 +321,7 @@ img {
     letter-spacing: 0.03em;
 }
 .footer-link:hover, 
-.footer-link:focus
-{
+.footer-link:focus {
     color: var(--accent-color);
 } 
 .footer-address {
